@@ -2,7 +2,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-    build:
+    job1:
       name: Run Script
       runs-on: self-hosted
       steps:
