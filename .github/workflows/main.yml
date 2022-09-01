@@ -1,16 +1,13 @@
-name: Multiline
-on: push
+name: CI
+on: [push, pull_request]
 
 jobs:
     build:
       name: Run Script
-      runs-on: self-hosted
+      runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v1
         - name: Script
+          run: ./test.ps1
           shell: pwsh
-          run: |
-            Write-Host "Line 1"
-            Write-Host "Line 2"
-            Write-Host "Line 3"
           
