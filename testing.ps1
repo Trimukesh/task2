@@ -16,3 +16,4 @@ $Env:MyVariable
 $Parameter1
 $PSVersionTable
 get-date
+get-credential
