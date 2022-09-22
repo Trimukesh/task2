@@ -3,9 +3,9 @@ on: [push, pull_request]
 jobs:
     job1:
       name: Run Script
-      runs-on: windows-latest
+      runs-on: self-hosted
       steps:
         - uses: actions/checkout@v1
         - name: Script
           run: |
-           ./testing.ps1
+           ./test.ps1
