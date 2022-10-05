@@ -4,7 +4,7 @@ jobs:
     job1:
       name: Run Script
       runs-on: self-hosted
-      steps:
+      steps: 
         - uses: actions/checkout@v1
         - name: Script
           run: |
