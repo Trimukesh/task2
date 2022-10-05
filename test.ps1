@@ -12,7 +12,7 @@ Write-Host "SSMS installer download complete" -ForegroundColor Green
  
 }
 else {
- 
+
 write-host "Located the SQL SSMS Installer binaries, moving on to install..."
 }
  
