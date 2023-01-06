@@ -1,12 +1,12 @@
-name: CI
-on: [push, pull_request]
+name: example-workflow
+on: [push]
 jobs:
-    job1:
-      name: Run Script
-      runs-on: self-hosted
-      if: env=dev
-      environment: dev
-      steps: 
-        - uses: actions/checkout@v1
-        - name: Script
-          run: echo "hello world"
+  production-deploy:
+    if: github.repository == 'task2'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
