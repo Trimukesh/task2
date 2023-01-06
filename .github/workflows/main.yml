@@ -11,7 +11,7 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
   dev-deploy:
-    if: github.repository == 'task2'
+    if: github.trigger == push
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
